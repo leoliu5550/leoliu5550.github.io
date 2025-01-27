@@ -13,17 +13,18 @@ build:
   script:
     - npm install
     - npm run build
-    - ls -al dist  # ✅ 確認 `dist/` 是否有生成
-    - mv dist public  # ✅ 確保 `dist/` 被正確移動到 `public/`
-    - ls -al public  # ✅ 再次確認 `public/` 內部是否有檔案
+    - ls -al dist  # 確認 dist/ 是否有內容
+    - mv dist public  # 把 dist/ 改名為 public/
+    - ls -al public  # 確認 public/ 內部是否有檔案
   artifacts:
     paths:
-      - public
+      - public  # 確保 GitLab Pages 可以找到 public/
+    expire_in: 1 week  # 設定 artifacts 的保存時間
 
 pages:
   stage: deploy
   script:
-    - mv public /public
+    - echo "Deploying GitLab Pages..."  # 移除 `mv public /public`
   artifacts:
     paths:
       - public
