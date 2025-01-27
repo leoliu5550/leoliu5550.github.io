@@ -6,7 +6,7 @@ cache:
 
 stages:
   - build
-  - deploy
+  - pages
 
 build:
   stage: build
@@ -14,7 +14,7 @@ build:
     - npm install
     - npm run build
     - mv dist/* public
-    - ls -l public  # 確保 public 目錄內有 index.html
+    - lspublic  # 確保 public 目錄內有 index.html
   artifacts:
     paths:
       - public
@@ -22,10 +22,10 @@ build:
     - main
 
 pages:
-  stage: deploy
+  stage: pages
   script:
     - echo "Deploying to GitLab Pages..."
-    - ls -l public 
+    - ls public 
   artifacts:
     paths:
       - public
