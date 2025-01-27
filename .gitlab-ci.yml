@@ -1,4 +1,4 @@
-image: node:18 # 使用 Node.js 18
+image: node:18
 
 cache:
   paths:
@@ -13,9 +13,17 @@ build:
   script:
     - npm install
     - npm run build
-    - mv dist public # 把 dist 改名為 public，讓 GitLab Pages 讀取
+    - mv dist public # ✅ 確保這行存在，把 dist 改名為 public
   artifacts:
     paths:
-      - public # GitLab Pages 需要這個資料夾
+      - public # ✅ 這樣 GitLab Pages 才會讀取 public 資料夾
+
+pages: # ✅ 這一段非常重要，讓 GitLab 正確部署 Pages
+  stage: deploy
+  script:
+    - mv public /public
+  artifacts:
+    paths:
+      - public
   only:
-    - main # 只在 main 分支執行
+    - main
