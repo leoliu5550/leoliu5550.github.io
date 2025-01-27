@@ -14,7 +14,7 @@ build:
     - npm install
     - npm run build
     - mv dist/* public
-    - lspublic  # 確保 public 目錄內有 index.html
+    - ls public  # 確保 public 目錄內有 index.html
   artifacts:
     paths:
       - public
