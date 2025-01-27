@@ -13,12 +13,14 @@ build:
   script:
     - npm install
     - npm run build
-    - mv dist public # ✅ 確保這行存在，把 dist 改名為 public
+    - ls -al dist  # ✅ 確認 `dist/` 是否有生成
+    - mv dist public  # ✅ 確保 `dist/` 被正確移動到 `public/`
+    - ls -al public  # ✅ 再次確認 `public/` 內部是否有檔案
   artifacts:
     paths:
-      - public # ✅ 這樣 GitLab Pages 才會讀取 public 資料夾
+      - public
 
-pages: # ✅ 這一段非常重要，讓 GitLab 正確部署 Pages
+pages:
   stage: deploy
   script:
     - mv public /public
