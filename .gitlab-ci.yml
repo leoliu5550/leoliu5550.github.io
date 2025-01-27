@@ -13,20 +13,22 @@ build:
   script:
     - npm install
     - npm run build
-    - mv dist public  # 確保 GitLab Pages 可以找到 public/
+    - mv dist public
+    - ls -l public  # 確保 public 目錄內有 index.html
   artifacts:
     paths:
-      - public  # 確保 artifacts 內有 public/
+      - public
     expire_in: 1 week
   only:
     - main
 
-deploy:
+pages:
   stage: deploy
   script:
     - echo "Deploying to GitLab Pages..."
+    - ls -l public 
   artifacts:
     paths:
-      - public  # GitLab Pages 需要的 public/ 目錄
+      - public
   only:
     - main
