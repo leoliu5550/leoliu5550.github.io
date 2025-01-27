@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="contact-container">
-      <div class="baby-container">
-        <div class="baby">
-          <img src="../assets/image/baby.jpg" alt="baby" />
-          <p>This is my girlfriend, in case you weren't aware.</p>
+      <div class="kirby-container">
+        <div class="kirby">
+          <img  alt="GIF" src="https://i.pinimg.com/originals/9c/40/eb/9c40eb371f746929e1cb477da963e7a5.gif" />
+          <p>This is kirby, my favorite character , in case you weren't aware.</p>
         </div>
       </div>
       <div class="contact">

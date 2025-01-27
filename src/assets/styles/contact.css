@@ -13,15 +13,8 @@
 
 
 
-.baby {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 230px;
-  height: 250px;
-  border-radius: 50%; 
-  overflow: hidden; 
-  margin-right: 2px; */
+.kirby {
+
 
   display: flex;
   flex-direction: column; /* 讓圖片和文字垂直排列 */
@@ -32,14 +25,15 @@
 
 } 
 
-.baby img {
-
+.kirby img {
   width: 230px;
   height: 250px;
-  border-radius: 40%; 
+  /* border-radius: 40%;  */
   object-fit: cover; 
+  border-bottom:1px solid black;
 }
-.baby p {
+
+.kirby p {
   width: 100%; /* 讓文字不超過圖片寬度 */
   word-wrap: break-word; /* 避免長單字超出 */
   margin-top: 10px; /* 增加與圖片的間距 */
