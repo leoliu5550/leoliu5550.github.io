@@ -1,0 +1,55 @@
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  text-align: center;
+  /* max-width: 600px; */
+  /* margin: auto; */
+  padding: 20px;
+}
+
+
+
+.baby {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 250px;
+  border-radius: 50%; 
+  overflow: hidden; 
+  margin-right: 2px; */
+
+  display: flex;
+  flex-direction: column; /* 讓圖片和文字垂直排列 */
+  align-items: center; /* 讓內容置中 */
+  width: 230px; /* 限制容器寬度 */
+  margin: 0 auto; /* 讓整個 `.baby` 區塊在頁面置中 */
+  text-align: center
+
+} 
+
+.baby img {
+
+  width: 230px;
+  height: 250px;
+  border-radius: 40%; 
+  object-fit: cover; 
+}
+.baby p {
+  width: 100%; /* 讓文字不超過圖片寬度 */
+  word-wrap: break-word; /* 避免長單字超出 */
+  margin-top: 10px; /* 增加與圖片的間距 */
+}
+
+a {
+  color: #3e5bdb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

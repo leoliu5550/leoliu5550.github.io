@@ -1,0 +1,30 @@
+.skills {
+    padding: 20px;
+  }
+  
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .skill-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .skill-info h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .skill-info p {
+    font-size: 14px;
+  }
+  
