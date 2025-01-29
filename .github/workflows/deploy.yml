@@ -33,4 +33,5 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/leoliu5550/myresume.git
 
           git checkout main
-          git subtree push --prefix dist origin gh-pages --force
+          git push origin --delete gh-pages || true 
+          git subtree push --prefix dist origin gh-pages
