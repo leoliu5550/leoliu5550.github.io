@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <h1>About Me22222</h1>
+    <h1>About Me2222</h1>
     <p>
       I am a senior data scientist with expertise in machine learning,
       data visualization, and statistical modeling.
