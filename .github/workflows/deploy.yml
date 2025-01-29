@@ -29,6 +29,13 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3  # 使用 v3 或更新版本
+        with:
+          name: dist # artifact 的名稱，可以自定義，但需要與 deploy-pages 的設定一致
+          path: dist # 指定包含 build 產生的檔案的目錄
+
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2 # 使用官方的 deploy-pages action，更簡潔
 
