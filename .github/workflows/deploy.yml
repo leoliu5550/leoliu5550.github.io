@@ -25,14 +25,11 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2 # 使用官方的 deploy-pages action，更簡潔
 
-      - name: Deploy using git subtree
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/leoliu5550/myresume.git
-          git add .  
-          git commit -m "npm run build"
-          git checkout main
-          git subtree pull --prefix=dist origin gh-pages --squash
+        with:
+          artifact-dir: dist # 指定要部署的目錄，這裡假設是 dist
 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
