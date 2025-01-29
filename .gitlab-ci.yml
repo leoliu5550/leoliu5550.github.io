@@ -1,8 +1,5 @@
-image: node:18
+image: node:lts
 
-cache:
-  paths:
-    - node_modules/
 
 stages:
   - build
