@@ -19,11 +19,11 @@
 
 .about {
   display: grid;
-  grid-template-rows: auto 1fr; /* Auto for h1, 1fr for content */
-  align-items: center; /* Center content vertically */
-  /* Or: align-items: start; for top alignment */
-  /* Or: align-items: end; for bottom alignment */
-  padding: 20px; /* Example */
+  grid-template-rows: auto 1fr; 
+  align-items: center; 
+  padding: 20px; 
+  background-color: #e2e6ea;
+  /* border-radius: 10%; */
 }
 
 .about h1 ,
