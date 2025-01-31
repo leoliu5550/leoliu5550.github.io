@@ -23,8 +23,7 @@
       </p>
       <ul>
         <li>Developing and deploying <strong>LLMs</strong> for intelligent automation and knowledge management.</li>
-        <li>Building <strong>vision-based quality inspection systems</strong> that improve defect detection accuracy by
-          X%.</li>
+        <li>Building <strong>vision-based quality inspection systems</strong> that improve defect detection accuracy.</li>
         <li>Leveraging <strong>data analytics</strong> to optimize manufacturing processes and reduce downtime.</li>
       </ul>
       <p>
