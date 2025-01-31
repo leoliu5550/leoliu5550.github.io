@@ -1,12 +1,42 @@
+/* .about {
+  padding: 20px;
+  text-align: center;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+} */
+
+/* .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+
 .about {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .about p {
-    font-size: 18px;
-    line-height: 1.5;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
+  display: grid;
+  grid-template-rows: auto 1fr; /* Auto for h1, 1fr for content */
+  align-items: center; /* Center content vertically */
+  /* Or: align-items: start; for top alignment */
+  /* Or: align-items: end; for bottom alignment */
+  padding: 20px; /* Example */
+}
+
+.about h1 ,
+.about h2{
+  justify-self: center;  
+  margin-bottom: 20px; 
+}
+
+.about .intro,
+.about .experience,
+.about .research {
+  width: 80%; /* Or a specific width */
+  max-width: 800px; /* Optional max-width */
+  margin-bottom: 20px; /* Space between sections */
+  justify-self: center; /* Center content horizontally */
+}
